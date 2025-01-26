@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galeria morze</title>
+  <link rel="stylesheet" href="galerymorze.css">
+</head>
+<body>
+
+  <button class="back-button" onclick="window.history.back()">Powrót</button>
+
+  <article class="grid-gallery">
+    <img src="zdjecia/morze/1a1.jpg" alt="description of picture 1" />
+    <img src="zdjecia/morze/2a1.jpg" alt="description of picture 2" />
+    <img src="zdjecia/morze/3a1.jpg" alt="description of picture 3" />
+    <img src="4a1.jpg" alt="description of picture 4" />
+    <img src="5a1.jpg" alt="description of picture 5" />
+    <img src="7a1.jpg" alt="description of picture 6" />
+    <img src="6a1.jpg" alt="description of picture 7" />
+    <img src="8a1.jpg" alt="description of picture 8" />
+    <img src="9a1.jpg" alt="description of picture 9" />
+    <img src="10a1.jpg" alt="description of picture 10" />
+    <img src="11a1.jpg" alt="description of picture 11" />
+    <img src="12a1.jpg" alt="description of picture 12" />
+    <img src="2a1.jpg" alt="description of picture 2 (again)" />
+  </article>
+
+  <!-- Modal: powiększone zdjęcie z nawigacją -->
+  <div class="modal" id="imageModal">
+    <span class="modal-close" id="modalClose">&times;</span>
+
+    <!-- Przycisk poprzednie -->
+    <div class="modal-nav prev" id="prevBtn">&#10094;</div>
+
+    <!-- Obraz powiększony -->
+    <img class="modal-content" id="modalImage" alt="Powiększone zdjęcie" />
+
+    <!-- Przycisk następne -->
+    <div class="modal-nav next" id="nextBtn">&#10095;</div>
+  </div>
+
+  <script src="script.js"></script> 
+</body>
+</html>
