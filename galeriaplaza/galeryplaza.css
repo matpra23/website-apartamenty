@@ -19,7 +19,7 @@ body::before {
   height: 100%;
   background:
     linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-    url("3a2.jpg") center/cover no-repeat;
+    url("plaza-zdjecia/3a2.jpg") center/cover no-repeat;
   filter: blur(10px);
   z-index: -1;
 }
