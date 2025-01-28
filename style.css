@@ -113,12 +113,11 @@
 }
 
 /* CANTACT BOX */
+/* CANTACT BOX */
 
 .contact-info-slider {
     position: absolute;
     bottom: 95px;
-    left: 50%;
-    transform: translateX(-50%);
     background: rgba(0, 0, 0, 0.5);
     color: #fff;
     padding: 20px 35px;
@@ -131,15 +130,31 @@
     opacity: 0; 
     transition: transform 0.5s ease, opacity 0.5s ease;
 }
-.contact-info-slider:hover{
+
+.contact-info-slider.left {
+    left: 32%;
+    transform: translateX(-50%);
+}
+
+.contact-info-slider.center {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.contact-info-slider.right {
+    left: 68%;
+    transform: translateX(-50%);
+}
+
+.contact-info-slider:hover {
     background: #ffffffc5;
     color: #000;
-    
 }
+
 .carousel-cell .contact-info-slider {
-    transform: translateX(-50%);
     opacity: 1;
 }
+
 .contact-info-slider.hidden {
     transform: translateX(-150%);
     opacity: 0;
