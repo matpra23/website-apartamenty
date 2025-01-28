@@ -131,18 +131,24 @@
     transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
+/*  CONTACT INFO ZMIENNE */
+
 .contact-info-slider.left {
-    left: 32%;
+    /*  32% jesli obowiazuje oferta specjalna */
+    left: 42%; 
     transform: translateX(-50%);
 }
 
-.contact-info-slider.center {
+/*  OFERTA SPECJALNA */
+
+/* .contact-info-slider.center { 
     left: 50%;
     transform: translateX(-50%);
-}
+} */
 
 .contact-info-slider.right {
-    left: 68%;
+    /*  68% jesli obowiazuje oferta specjalna */
+    left: 58%;
     transform: translateX(-50%);
 }
 
