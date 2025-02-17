@@ -100,7 +100,7 @@ body::before {
   grid-auto-rows: var(--size);
   gap: 5px;
   place-items: center;
-  margin: 75px;
+  margin: 150px;
 }
 
 /* Każdy obrazek w galerii */
@@ -116,7 +116,7 @@ body::before {
 }
 
 /* Ustawienie kolumn dla co 5tego zdjęcia (opcjonalne) */
-.grid-gallery img:nth-child(5n - 1) { 
+.grid-gallery img:nth-child(2n - 1) { 
   grid-column: 2 / span 2;
 }
 
