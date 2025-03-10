@@ -1,13 +1,21 @@
-/* BACKGROUND */
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100vw;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   min-height: 100vh;
   font-family: Arial, sans-serif;
-  position: relative;
 }
 
 body::before {
@@ -247,5 +255,12 @@ body::before {
     padding: 60px 20px;
     height: calc(100vh - 120px);
   }
+}
+
+.gallery-container {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  position: relative;
 }
 

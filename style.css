@@ -95,7 +95,7 @@
 }
 
 .slider .flickity-page-dots{
-    bottom: 60px;
+    bottom: 30px;
 }
 
 .slider .flickity-page-dots .dot{
@@ -113,12 +113,11 @@
 }
 
 /* CANTACT BOX */
-/* CANTACT BOX */
 
 .contact-info-slider {
     position: absolute;
-    bottom: 95px;
-    background: rgba(255, 255, 255, 0.08);
+    bottom: 120px;
+    background: rgba(17, 26, 37, 0.85);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     color: #fff;
@@ -126,14 +125,38 @@
     border-radius: 12px;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
     font-size: 16px;
     z-index: 3;
     opacity: 0;
     transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     min-width: 200px;
     cursor: pointer;
+}
+
+/* Specjalne style dla kafelków na slajdach 2 i 3 */
+.carousel-cell:nth-child(2) .contact-info-slider {
+    background: rgba(17, 26, 37, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-cell:nth-child(3) .contact-info-slider {
+    background: rgba(37, 36, 37, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect dla kafelków na slajdach 2 i 3 */
+.carousel-cell:nth-child(2) .contact-info-slider:hover {
+    background: rgba(17, 26, 37, 0.95);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-cell:nth-child(3) .contact-info-slider:hover {
+    background: rgba(37, 36, 37, 0.95);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 /*  CONTACT INFO ZMIENNE */
@@ -193,8 +216,8 @@
 
 /* Hover effect for all slides */
 .contact-info-slider:hover {
-    background: rgba(255, 255, 255, 0.12);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    background: rgba(17, 26, 37, 0.95);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 .carousel-cell .contact-info-slider {
@@ -211,6 +234,7 @@
     .contact-info-slider {
         padding: 18px 30px;
         font-size: 15px;
+        bottom: 100px;
     }
     
     .contact-info-slider.left {
@@ -226,6 +250,7 @@
     .contact-info-slider {
         padding: 16px 25px;
         font-size: 14px;
+        bottom: 80px;
     }
     
     .contact-info-slider.left {
@@ -235,7 +260,7 @@
     
     .contact-info-slider.right {
         left: 50%;
-        bottom: 95px;
+        bottom: 80px;
     }
 }
 
@@ -243,10 +268,11 @@
     .contact-info-slider {
         padding: 15px 20px;
         font-size: 13px;
+        bottom: 60px;
     }
     
     .contact-info-slider.left {
-        bottom: 170px;
+        bottom: 140px;
     }
 }
 
@@ -255,14 +281,15 @@
         padding: 12px 18px;
         font-size: 12px;
         min-width: 180px;
+        bottom: 80px;
     }
     
     .contact-info-slider.left {
-        bottom: 160px;
+        bottom: 150px;
     }
     
     .contact-info-slider.right {
-        bottom: 85px;
+        bottom: 80px;
     }
 }
 
