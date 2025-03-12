@@ -9,17 +9,19 @@ Strona internetowa prezentująca ofertę apartamentów w Łebie. Projekt składa
 
 ### Strona Główna
 - Interaktywne slajdy zdjęć budynku i wnętrza apartamentów
-- Responsywne panele kontaktowe
-- Przycisk przekierowujący do atrakcji turystycznych
+- Responsywne panele kontaktowe z dynamicznym pozycjonowaniem
+- Przycisk przekierowujący do atrakcji turystycznych (otwieranie w nowej karcie)
 - Nawigacja do galerii poszczególnych apartamentów
 - Pełna optymalizacja pod urządzenia mobilne
+- Płynne animacje i przejścia
 
 ### Galerie Zdjęć
 - Osobne galerie dla Apartamentu Morze i Apartamentu Plaża
 - Responsywny układ zdjęć (4 zdjęcia w narożnikach)
 - Efekt powiększenia zdjęć przy najechaniu
-- Przycisk powrotu do strony głównej
+- Interaktywny przycisk powrotu do strony głównej
 - Dostosowanie do różnych rozdzielczości ekranu
+- Zoptymalizowany modal do przeglądania zdjęć
 
 ## 📞 Kontakt
 W przypadku pytań lub problemów technicznych prosimy o kontakt telefoniczny.
@@ -32,19 +34,29 @@ W przypadku pytań lub problemów technicznych prosimy o kontakt telefoniczny.
 - Rozbudowa sekcji atrakcji turystycznych
 - Sezonowa oferta dla klientów
 
-### Optymalizacja
-- Poprawa strony wizualnej z poziomu użytkowników urządzeń mobilnych
-- Dalsza poprawa wydajności ładowania
-- Rozszerzenie wsparcia dla starszych przeglądarek
-- Implementacja PWA (Progressive Web App)
+### Optymalizacja i Bezpieczeństwo
+- Implementacja zmiennych CSS dla łatwiejszej modyfikacji stylów
+- Optymalizacja wydajności poprzez grupowanie selektorów CSS
+- Modernizacja składni CSS z wykorzystaniem nowych właściwości
+- Poprawa dostępności dla czytników ekranu
+- Zabezpieczenie linków zewnętrznych (rel="noopener noreferrer")
+- Optymalizacja pamięci podręcznej przeglądarki
 
 ## 🎨 Szczegóły Implementacji
 
 ### Technologie
 - HTML5
-- CSS3 (z wykorzystaniem Flexbox i Grid)
+- CSS3 (z wykorzystaniem Flexbox, Grid i zmiennych CSS)
 - JavaScript
-- Flickity.js (karuzela)
+- Flickity.js (karuzela z optymalizacją wydajności)
+
+### Optymalizacje Kodu
+- Wykorzystanie zmiennych CSS dla spójności kolorów i animacji
+- Zoptymalizowane selektory dla lepszej wydajności
+- Grupowanie podobnych stylów
+- Modernizacja składni (np. użycie inset zamiast osobnych właściwości)
+- Usunięcie zbędnych prefiksów vendor
+- Optymalizacja media queries
 
 ## 🔧 Struktura Projektu
 
@@ -63,12 +75,25 @@ website-apartamenty/
 ```
 
 ## 🔒 Bezpieczeństwo
-- Zabezpieczenie przed przewijaniem poziomym na urządzeniach mobilnych
-- Optymalizacja obrazów
+- Zabezpieczenie przed przewijaniem poziomym
+- Optymalizacja obrazów i zasobów
 - Bezpieczne linkowanie do zewnętrznych stron
+- Ochrona przed atakami XSS poprzez odpowiednie nagłówki
+- Implementacja polityki bezpieczeństwa treści (CSP)
+- Zabezpieczenie przed clickjackingiem
+- Bezpieczne otwieranie linków zewnętrznych w nowych kartach
 
-## 📈 SEO
+## 📈 SEO i Wydajność
 - Zoptymalizowane meta tagi
-- Responsywne obrazy
-- Szybkie ładowanie strony
+- Responsywne obrazy z odpowiednimi atrybutami
+- Szybkie ładowanie strony dzięki optymalizacji CSS
 - Przyjazne adresy URL
+- Semantyczna struktura HTML
+- Optymalizacja Core Web Vitals
+- Minimalizacja czasu ładowania pierwszej treści (FCP)
+
+## 🔄 Kompatybilność
+- Wsparcie dla nowoczesnych przeglądarek
+- Fallbacki dla starszych wersji przeglądarek
+- Responsywność na wszystkich urządzeniach
+- Optymalizacja dla różnych rozdzielczości ekranu
