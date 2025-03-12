@@ -116,7 +116,7 @@
 
 .contact-info-slider {
     position: absolute;
-    bottom: 120px;
+    bottom: 15vh;
     background: rgba(17, 26, 37, 0.85);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
@@ -236,7 +236,6 @@
     .contact-info-slider {
         padding: 12px 20px;
         font-size: 13px;
-        bottom: 100px;
         min-width: 160px;
     }
     
@@ -253,18 +252,11 @@
     .contact-info-slider {
         padding: 10px 18px;
         font-size: 12px;
-        bottom: 80px;
         min-width: 150px;
     }
     
-    .contact-info-slider.left {
-        left: 50%;
-        bottom: 160px;
-    }
-    
-    .contact-info-slider.right {
-        left: 50%;
-        bottom: 80px;
+    .carousel-cell:first-child .contact-info-slider {
+        bottom: 20vh;
     }
 }
 
@@ -272,11 +264,11 @@
     .contact-info-slider {
         padding: 15px 20px;
         font-size: 13px;
-        bottom: 60px;
+        bottom: 8vh;
     }
     
-    .contact-info-slider.left {
-        bottom: 140px;
+    .carousel-cell:first-child .contact-info-slider {
+        bottom: 15vh;
     }
 }
 
@@ -285,10 +277,11 @@
         padding: 8px 15px;
         font-size: 11px;
         min-width: 140px;
+        bottom: 6vh;
     }
     
-    .contact-info-slider.left {
-        bottom: 150px;
+    .carousel-cell:first-child .contact-info-slider {
+        bottom: 12vh;
     }
     
     .contact-info-slider.right {
@@ -318,3 +311,16 @@ p {
     font-weight: 700;
     vertical-align: top;
   }
+
+/* Media queries dla różnych wysokości ekranu */
+@media screen and (max-height: 800px) {
+    .contact-info-slider {
+        bottom: 12vh;
+    }
+}
+
+@media screen and (max-height: 600px) {
+    .contact-info-slider {
+        bottom: 10vh;
+    }
+}
