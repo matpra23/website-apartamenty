@@ -161,13 +161,15 @@
 
 /*  CONTACT INFO ZMIENNE */
 
-.contact-info-slider.left {
-    left: 40%; 
+/* Centrowanie kafelka kontaktowego na pierwszym slajdzie */
+.carousel-cell:first-child .contact-info-slider {
+    left: 50%;
     transform: translateX(-50%);
 }
 
-.contact-info-slider.right {
-    left: 60%;
+/* Zachowujemy pozycjonowanie dla pozostałych slajdów */
+.carousel-cell:not(:first-child) .contact-info-slider:first-child {
+    left: 40%;
     transform: translateX(-50%);
 }
 
