@@ -1,28 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto+Slab:wght@300;400;500;600;700&display=swap');
 
-/* MAIN STYLE */
-
-*{
+/* Reset & Base Styles */
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
     color-scheme: light dark;
 }
 
-/* MAIN DESIGN */
-
-.gradient{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(to bottom, rgba(17, 26, 37, 0.8), rgba(37, 36, 37, 0.2));
-}
-
-.slider{
+/* Slider Layout */
+.slider {
     width: 100%;
     height: 100vh;
     overflow: hidden;
@@ -30,7 +22,7 @@
     z-index: 1;
 }
 
-.slider .carousel-cell{
+.carousel-cell {
     width: 100%;
     height: 100%;
     background: no-repeat center/cover;
@@ -40,12 +32,20 @@
     text-align: center;
 }
 
-.slider .carousel-cell .info-container{
+/* Gradient Overlay */
+.gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(17, 26, 37, 0.8), rgba(37, 36, 37, 0.2));
+}
+
+/* Info Container Styles */
+.info-container {
     color: #ffffff;
     position: relative;
 }
 
-.slider .carousel-cell .info-container .header{
+.info-container .header {
     font-family: 'Roboto Slab', sans-serif;
     font-size: 35px;
     font-weight: 400;
@@ -55,7 +55,7 @@
     margin-bottom: 8px;
 }
 
-.slider .carousel-cell .info-container .text{
+.info-container .text {
     font-family: 'Montserrat', sans-serif;
     font-size: 46px;
     font-weight: bold;
@@ -64,7 +64,8 @@
     margin-bottom: 32px;
 }
 
-.slider .carousel-cell .info-container button{
+/* Button Styles */
+.info-container button {
     padding: 12px 20px;
     background: transparent;
     border: 1px solid #fff;
@@ -78,27 +79,44 @@
     transition: all 0.3s ease;
 }
 
-.slider .carousel-cell .info-container button:hover{
+.info-container button:hover {
     background: #ffffffc5;
     color: #000;
     font-weight: bold;
 }
 
-.slider .flickity-prev-next-button{
+/* Flickity Navigation */
+.flickity-prev-next-button {
     width: 85px;
     height: 85px;
     background: transparent;
 }
 
-.slider .flickity-prev-next-button .arrow{
+.flickity-prev-next-button:hover {
+    background: transparent;
+}
+
+.flickity-prev-next-button .arrow {
     fill: #fff;
 }
 
-.slider .flickity-page-dots{
+.flickity-prev-next-button.no-svg {
+    color: #fff;
+}
+
+.flickity-button {
+    background: transparent;
+}
+
+.flickity-button:hover {
+    background: transparent;
+}
+
+.flickity-page-dots {
     bottom: 30px;
 }
 
-.slider .flickity-page-dots .dot{
+.flickity-page-dots .dot {
     width: 50px;
     height: 15px;
     background: rgba(255, 255, 255, 0.4);
@@ -107,17 +125,21 @@
     transition: all 0.3s ease;
 }
 
-.slider .flickity-page-dots .dot:hover,
-.slider .flickity-page-dots .dot.is-selected{
+.flickity-page-dots .dot:hover,
+.flickity-page-dots .dot.is-selected {
     background: #fff;
 }
 
-/* CANTACT BOX */
-
+/* Contact Info Slider Base Styles */
 .contact-info-slider {
+    --base-bg: rgba(17, 26, 37, 0.85);
+    --hover-bg: rgba(17, 26, 37, 0.95);
+    --shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    --hover-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+
     position: absolute;
     bottom: 15vh;
-    background: rgba(17, 26, 37, 0.85);
+    background: var(--base-bg);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     color: #fff;
@@ -125,61 +147,36 @@
     border-radius: 10px;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow);
     font-size: 14px;
     z-index: 3;
-    opacity: 0;
+    opacity: 1;
     transition: all 0.3s ease;
     border: 1px solid rgba(255, 255, 255, 0.15);
     min-width: 180px;
     cursor: pointer;
 }
 
-/* Specjalne style dla kafelków na slajdach 2 i 3 */
-.carousel-cell:nth-child(2) .contact-info-slider {
-    background: rgba(17, 26, 37, 0.85);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-}
-
-.carousel-cell:nth-child(3) .contact-info-slider {
-    background: rgba(37, 36, 37, 0.85);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* Hover effect dla kafelków na slajdach 2 i 3 */
-.carousel-cell:nth-child(2) .contact-info-slider:hover {
-    background: rgba(17, 26, 37, 0.95);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-}
-
-.carousel-cell:nth-child(3) .contact-info-slider:hover {
-    background: rgba(37, 36, 37, 0.95);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-}
-
-/*  CONTACT INFO ZMIENNE */
-
-/* Centrowanie kafelka kontaktowego na pierwszym slajdzie */
+/* Contact Info Positioning */
 .carousel-cell:first-child .contact-info-slider {
     left: 50%;
     transform: translateX(-50%);
 }
 
-/* Zachowujemy pozycjonowanie dla pozostałych slajdów */
 .carousel-cell:not(:first-child) .contact-info-slider:first-child {
     left: 40%;
     transform: translateX(-50%);
 }
 
+/* Contact Info Content Styles */
 .contact-info-slider p {
     margin: 4px 0;
     font-weight: 400;
     letter-spacing: 0.3px;
 }
 
-.contact-info-slider a {
+.contact-info-slider a,
+.panel-link {
     color: #fff;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -191,16 +188,13 @@
 }
 
 .panel-link {
-    display: block;
-    width: 100%;
-    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    text-decoration: none;
     color: inherit;
 }
 
+/* Link Hover Effect */
 .contact-info-slider a::after {
     content: '';
     position: absolute;
@@ -216,14 +210,10 @@
     width: 100%;
 }
 
-/* Hover effect for all slides */
+/* Hover Effects */
 .contact-info-slider:hover {
-    background: rgba(17, 26, 37, 0.95);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-}
-
-.carousel-cell .contact-info-slider {
-    opacity: 1;
+    background: var(--hover-bg);
+    box-shadow: var(--hover-shadow);
 }
 
 .contact-info-slider.hidden {
@@ -231,20 +221,12 @@
     opacity: 0;
 }
 
-/* Media queries for different screen sizes */
+/* Responsive Breakpoints */
 @media screen and (max-width: 1200px) {
     .contact-info-slider {
         padding: 12px 20px;
         font-size: 13px;
         min-width: 160px;
-    }
-    
-    .contact-info-slider.left {
-        left: 38%;
-    }
-    
-    .contact-info-slider.right {
-        left: 62%;
     }
 }
 
@@ -254,7 +236,7 @@
         font-size: 12px;
         min-width: 150px;
     }
-    
+
     .carousel-cell:first-child .contact-info-slider {
         bottom: 20vh;
     }
@@ -266,7 +248,7 @@
         font-size: 13px;
         bottom: 8vh;
     }
-    
+
     .carousel-cell:first-child .contact-info-slider {
         bottom: 15vh;
     }
@@ -279,40 +261,13 @@
         min-width: 140px;
         bottom: 6vh;
     }
-    
+
     .carousel-cell:first-child .contact-info-slider {
         bottom: 12vh;
     }
-    
-    .contact-info-slider.right {
-        bottom: 80px;
-    }
 }
 
-p {
-    white-space: pre;
-}
-
-/* HYPERLINK HOVER*/
-
-  /* Presentational Styles */
-  body {
-    display: grid;
-    font-family: 'Poppins', sans-serif;
-    font-size: 27px;
-    line-height: 1.5;
-    height: 100vh;
-    place-items: center;
-  }
-  
-  a {
-    text-decoration: none;
-    color: #00c3ff;
-    font-weight: 700;
-    vertical-align: top;
-  }
-
-/* Media queries dla różnych wysokości ekranu */
+/* Height-based Media Queries */
 @media screen and (max-height: 800px) {
     .contact-info-slider {
         bottom: 12vh;

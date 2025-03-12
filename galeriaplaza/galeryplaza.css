@@ -1,3 +1,15 @@
+/* CSS Variables */
+:root {
+  --overlay-color: rgba(0, 0, 0, 0.5);
+  --button-shadow: #01321d75;
+  --modal-bg: rgba(0, 0, 0, 0.9);
+  --white: #f0f0f0;
+  --button-bg: #28282d;
+  --transition-normal: all 0.3s ease;
+  --transition-slow: all 0.4s ease;
+}
+
+/* Reset & Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -18,31 +30,26 @@ body {
   font-family: Arial, sans-serif;
 }
 
+/* Background Overlay */
 body::before {
   content: "";
   position: fixed;
-  top: 0; 
-  left: 0;
-  width: 100%; 
-  height: 100%;
-  background:
-    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-    url("plaza-zdjecia/3a2.jpg") center/cover no-repeat;
+  inset: 0;
+  background: linear-gradient(var(--overlay-color), var(--overlay-color)), 
+              url("plaza-zdjecia/3a2.jpg") center/cover no-repeat;
   filter: blur(10px);
   z-index: -1;
 }
 
-/* PRZYCISK POWROTU */
+/* Back Button Styles */
 .back-button {
   all: unset;
   width: 100px;
   height: 30px;
   margin-top: 30px;
   font-size: 16px;
-  background: transparent;
-  border: none;
   position: relative;
-  color: #f0f0f0;
+  color: var(--white);
   cursor: pointer;
   z-index: 1;
   padding: 10px 20px;
@@ -51,25 +58,24 @@ body::before {
   justify-content: center;
   white-space: nowrap;
   user-select: none;
-  -webkit-user-select: none;
   touch-action: manipulation;
 }
 
-.back-button::after,
-.back-button::before {
+.back-button::before,
+.back-button::after {
   content: '';
   position: absolute;
   bottom: 0;
   right: 0;
   z-index: -99999;
-  transition: all .4s;
+  transition: var(--transition-slow);
 }
 
 .back-button::before {
   transform: translate(0%, 0%);
   width: 100%;
   height: 100%;
-  background: #28282d;
+  background: var(--button-bg);
   border-radius: 10px;
 }
 
@@ -77,9 +83,8 @@ body::before {
   transform: translate(10px, 10px);
   width: 35px;
   height: 35px;
-  background: #01321d75;
+  background: var(--button-shadow);
   backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
   border-radius: 50px;
 }
 
@@ -101,7 +106,7 @@ body::before {
   transform: translate(0, 5%);
 }
 
-/* NOWA GALERIA ZDJĘĆ */
+/* Gallery Grid Layout */
 .grid-gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -115,14 +120,14 @@ body::before {
   position: relative;
 }
 
-/* Każdy obrazek w galerii */
+/* Gallery Image Styles */
 .grid-gallery img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 15px;
   cursor: pointer;
-  transition: all 0.4s ease;
+  transition: var(--transition-slow);
   position: relative;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -149,16 +154,13 @@ body::before {
   opacity: 1;
 }
 
-/* MODAL */
+/* Modal Styles */
 .modal {
   display: none;
   position: fixed;
   z-index: 9999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
+  inset: 0;
+  background-color: var(--modal-bg);
   justify-content: center;
   align-items: center;
   transition: opacity 0.3s ease-in-out;
@@ -178,22 +180,36 @@ body::before {
   animation: scaleIn 0.3s ease forwards;
 }
 
-.modal-close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
+/* Modal Navigation */
+.modal-close,
+.modal-nav {
   color: #fff;
-  font-size: 2.5rem;
-  font-weight: bold;
   cursor: pointer;
-  transition: all 0.3s ease;
-  width: 40px;
-  height: 40px;
+  transition: var(--transition-normal);
   display: flex;
   align-items: center;
   justify-content: center;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  width: 40px;
+  height: 40px;
+}
+
+.modal-nav {
+  font-size: 2.5rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
 }
 
 .modal-close:hover {
@@ -201,46 +217,28 @@ body::before {
   transform: rotate(90deg);
 }
 
-.modal-nav {
-  color: #fff;
-  font-size: 2.5rem;
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-}
-
 .modal-nav:hover {
   background: rgba(255, 255, 255, 0.2);
   transform: translateY(-50%) scale(1.1);
 }
 
-.modal-nav.prev {
-  left: 20px;
-}
-
-.modal-nav.next {
-  right: 20px;
-}
+.modal-nav.prev { left: 20px; }
+.modal-nav.next { right: 20px; }
 
 @keyframes scaleIn {
-  0% {
-    transform: scale(0.8);
-  }
-  100% {
-    transform: scale(1);
-  }
+  from { transform: scale(0.8); }
+  to { transform: scale(1); }
 }
 
-/* Responsywność */
+/* Container Styles */
+.gallery-container {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Responsive Design */
 @media screen and (max-width: 768px) {
   .grid-gallery {
     gap: 20px;
@@ -255,12 +253,5 @@ body::before {
     padding: 60px 20px;
     height: calc(100vh - 120px);
   }
-}
-
-.gallery-container {
-  width: 100%;
-  max-width: 100vw;
-  overflow-x: hidden;
-  position: relative;
 }
 
