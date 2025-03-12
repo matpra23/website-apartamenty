@@ -121,17 +121,17 @@
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     color: #fff;
-    padding: 20px 35px;
-    border-radius: 12px;
+    padding: 15px 25px;
+    border-radius: 10px;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-    font-size: 16px;
+    font-size: 14px;
     z-index: 3;
     opacity: 0;
     transition: all 0.3s ease;
     border: 1px solid rgba(255, 255, 255, 0.15);
-    min-width: 200px;
+    min-width: 180px;
     cursor: pointer;
 }
 
@@ -174,9 +174,9 @@
 }
 
 .contact-info-slider p {
-    margin: 6px 0;
+    margin: 4px 0;
     font-weight: 400;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
 }
 
 .contact-info-slider a {
@@ -234,9 +234,10 @@
 /* Media queries for different screen sizes */
 @media screen and (max-width: 1200px) {
     .contact-info-slider {
-        padding: 18px 30px;
-        font-size: 15px;
+        padding: 12px 20px;
+        font-size: 13px;
         bottom: 100px;
+        min-width: 160px;
     }
     
     .contact-info-slider.left {
@@ -250,9 +251,10 @@
 
 @media screen and (max-width: 992px) {
     .contact-info-slider {
-        padding: 16px 25px;
-        font-size: 14px;
+        padding: 10px 18px;
+        font-size: 12px;
         bottom: 80px;
+        min-width: 150px;
     }
     
     .contact-info-slider.left {
@@ -280,10 +282,9 @@
 
 @media screen and (max-width: 576px) {
     .contact-info-slider {
-        padding: 12px 18px;
-        font-size: 12px;
-        min-width: 180px;
-        bottom: 80px;
+        padding: 8px 15px;
+        font-size: 11px;
+        min-width: 140px;
     }
     
     .contact-info-slider.left {
