@@ -114,20 +114,65 @@ body {
 
 .flickity-page-dots {
     bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    left: 0;
+    right: 0;
 }
 
 .flickity-page-dots .dot {
-    width: 50px;
-    height: 15px;
-    background: rgba(255, 255, 255, 0.4);
+    width: 70px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.404);
     opacity: 1;
     border-radius: 20px;
     transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0;
 }
 
+.flickity-page-dots .dot::before {
+    content: attr(data-text);
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+/* Specific colors for each dot */
+.flickity-page-dots .dot:nth-child(2) {
+    background: rgba(8, 8, 148, 0.4); /* Ciemnoniebieski dla "morze" */
+}
+.flickity-page-dots .dot:nth-child(2):hover,
+.flickity-page-dots .dot:nth-child(2).is-selected {
+    background: rgba(8, 8, 148, 0.8); /* Jaśniejszy ciemnoniebieski */
+}
+
+.flickity-page-dots .dot:nth-child(3) {
+    background: rgba(2, 59, 42, 0.4); /* Morski-zielony dla "plaża" */
+}
+.flickity-page-dots .dot:nth-child(3):hover,
+.flickity-page-dots .dot:nth-child(3).is-selected {
+    background: rgba(2, 59, 42, 0.8); /* Jaśniejszy morski-zielony */
+}
+
+/* Hover and selected states */
 .flickity-page-dots .dot:hover,
 .flickity-page-dots .dot.is-selected {
-    background: #fff;
+    background: #ffffff;
+    font-weight: 600;
 }
 
 /* Contact Info Slider Base Styles */

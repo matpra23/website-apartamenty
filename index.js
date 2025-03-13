@@ -13,7 +13,7 @@ const options = {
     }
 };
 
-// Function to set background position forr slides
+// Function to set background position for slides
 function setBgPosition(slide, index) {
     const x = -(slide.target + flkty.x) / 3;
     slides[index].style.backgroundPosition = `${x}px`;
@@ -24,16 +24,24 @@ const carousel = document.querySelector('[carousel]');
 const slides = Array.from(document.getElementsByClassName('carousel-cell'));
 const flkty = new Flickity(carousel, options);
 
-// Uzyskaj sekcję kontaktową
+// Add text to navigation dots
+const dots = document.querySelectorAll('.flickity-page-dots .dot');
+slides.forEach((slide, index) => {
+    if (dots[index]) {
+        dots[index].setAttribute('data-text', slide.getAttribute('data-text'));
+    }
+});
+
+// Get contact info section
 const contactInfo = document.querySelector('.contact-info-slider');
 
-// Nasłuchiwanie zmiany slajdu
+// Listen for slide change
 flkty.on('change', (index) => {
     if (index === 0) {
-        // Usuwamy klasę `hidden` na pierwszym slajdzie
+        // Remove 'hidden' class on first slide
         contactInfo.classList.remove('hidden');
     } else {
-        // Dodajemy klasę `hidden` na innych slajdach
+        // Add 'hidden' class on other slides
         contactInfo.classList.add('hidden');
     }
 });
