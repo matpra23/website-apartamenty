@@ -70,8 +70,13 @@ website-apartamenty/
 ├── galeriamorze/
 │   ├── index.html
 │   └── galerymorze.css
+├── opinie/
+│   ├── opinie.html
+│   ├── opinie.css
+│   └── script.js
 └── zdjecia/
-    └── glowna/
+    ├── glowna/
+    └── opinie/
 ```
 
 ## 🔒 Bezpieczeństwo
