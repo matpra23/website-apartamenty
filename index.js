@@ -3,6 +3,7 @@ const options = {
     prevNextButtons: true,
     pageDots: true,
     setGallerySize: false,
+    initialIndex: 0,
     arrowShape: {
         x0: 1,
         x1: 58,
@@ -37,8 +38,8 @@ const contactInfo = document.querySelector('.contact-info-slider');
 
 // Listen for slide change
 flkty.on('change', (index) => {
-    if (index === 0) {
-        // Remove 'hidden' class on first slide
+    if (index === 1) {
+        // Remove 'hidden' class on main slide
         contactInfo.classList.remove('hidden');
     } else {
         // Add 'hidden' class on other slides

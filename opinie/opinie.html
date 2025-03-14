@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Opinie gości</title>
+  <link rel="icon" type="image/png" href="../zdjecia/logobolo.png">
+  <link rel="stylesheet" href="opinie.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto+Slab:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <button class="back-button" onclick="window.history.back()">Strona główna</button>
+
+  <div class="info-container">
+    <h3 class="header">Co mówią nasi goście</h3>
+    <h2 class="text">Najnowsze opinie</h2>
+  </div>
+
+  <article class="reviews-grid">
+    <img src="../zdjecia/opinie/opinia1.jpg" alt="Opinia 1" class="review-img" />
+    <img src="../zdjecia/opinie/opinia2.jpg" alt="Opinia 2" class="review-img" />
+    <img src="../zdjecia/opinie/opinia3.jpg" alt="Opinia 3" class="review-img" />
+    <img src="../zdjecia/opinie/opinia4.jpg" alt="Opinia 4" class="review-img" />
+  </article>
+
+  <!-- Modal: powiększone zdjęcie z nawigacją -->
+  <div class="modal" id="imageModal">
+    <span class="modal-close" id="modalClose">&times;</span>
+
+    <!-- Przycisk poprzednie -->
+    <div class="modal-nav prev" id="prevBtn">&#10094;</div>
+
+    <!-- Obraz powiększony -->
+    <img class="modal-content" id="modalImage" alt="Powiększone zdjęcie" />
+
+    <!-- Przycisk następne -->
+    <div class="modal-nav next" id="nextBtn">&#10095;</div>
+  </div>
+
+  <script src="script.js"></script> 
+</body>
+</html>
