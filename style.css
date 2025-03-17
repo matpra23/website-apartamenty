@@ -245,6 +245,11 @@ body {
     color: inherit;
 }
 
+.rabat {
+    color: #ff0000;
+    font-size: 14px;
+}
+
 /* Link Hover Effect */
 .contact-info-slider a::after {
     content: '';
@@ -503,37 +508,5 @@ body {
         right: 15px;
         font-size: 18px;
         padding: 5px 8px;
-    }
-}
-
-/* Promotion Text Styles */
-.oferta {
-    color: #fff;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    padding: 15px 25px;
-    background: linear-gradient(45deg, rgba(0, 119, 190, 0.85), rgba(0, 180, 216, 0.85));
-    border-radius: 50px;
-    box-shadow: 0 4px 15px rgba(0, 119, 190, 0.3);
-    animation: pulse 2s infinite;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin: 20px auto;
-    max-width: 80%;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-@media screen and (max-width: 768px) {
-    .oferta {
-        font-size: 20px;
-        padding: 12px 20px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .oferta {
-        font-size: 18px;
-        padding: 10px 15px;
     }
 }
