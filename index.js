@@ -70,25 +70,32 @@ document.querySelectorAll('.slide-link').forEach(link => {
     });
 });
 
-// Handle About section
-const aboutButton = document.querySelector('.about-button');
-const aboutSection = document.querySelector('.about-section');
-const closeAbout = document.querySelector('.close-about');
+// About Section Navigation
+document.addEventListener('DOMContentLoaded', function() {
+    const aboutButton = document.querySelector('.about-button');
+    const aboutSection = document.querySelector('.about-section');
+    const closeAbout = document.querySelector('.close-about');
+    const navigationButtons = document.querySelectorAll('.flickity-prev-next-button');
 
-aboutButton.addEventListener('click', () => {
-    aboutSection.classList.add('active');
-    document.body.style.overflow = 'hidden';
-});
-
-closeAbout.addEventListener('click', () => {
-    aboutSection.classList.remove('active');
-    document.body.style.overflow = '';
-});
-
-// Close about section when clicking outside
-aboutSection.addEventListener('click', (e) => {
-    if (e.target === aboutSection) {
-        aboutSection.classList.remove('active');
-        document.body.style.overflow = '';
+    function hideNavigation() {
+        navigationButtons.forEach(button => {
+            button.classList.add('hidden');
+        });
     }
+
+    function showNavigation() {
+        navigationButtons.forEach(button => {
+            button.classList.remove('hidden');
+        });
+    }
+
+    aboutButton.addEventListener('click', function() {
+        aboutSection.classList.add('active');
+        hideNavigation();
+    });
+
+    closeAbout.addEventListener('click', function() {
+        aboutSection.classList.remove('active');
+        showNavigation();
+    });
 });

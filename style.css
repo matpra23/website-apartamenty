@@ -130,6 +130,12 @@ body {
     width: 85px;
     height: 85px;
     background: transparent;
+    transition: opacity 0.3s ease;
+}
+
+.flickity-prev-next-button.hidden {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .flickity-prev-next-button:hover {
