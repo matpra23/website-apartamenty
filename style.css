@@ -64,6 +64,26 @@ body {
     margin-bottom: 32px;
 }
 
+.info-container .text .slide-link {
+    color: #ffffff;
+    text-decoration: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+.info-container .text .slide-link:hover {
+    border-bottom-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Mobile touch feedback */
+@media (hover: none) {
+    .info-container .text .slide-link:active {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
 /* Button Styles */
 .info-container button {
     padding: 12px 20px;

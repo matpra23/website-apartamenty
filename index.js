@@ -51,3 +51,12 @@ flkty.on('change', (index) => {
 flkty.on('scroll', () => {
     flkty.slides.forEach(setBgPosition);
 });
+
+// Handle slide navigation links
+document.querySelectorAll('.slide-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const slideIndex = parseInt(link.getAttribute('data-slide'));
+        flkty.select(slideIndex);
+    });
+});
