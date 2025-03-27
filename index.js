@@ -23,7 +23,16 @@ function setBgPosition(slide, index) {
 // Slides initialization
 const carousel = document.querySelector('[carousel]');
 const slides = Array.from(document.getElementsByClassName('carousel-cell'));
-const flkty = new Flickity(carousel, options);
+var flkty = new Flickity(carousel, {
+    cellAlign: 'center',
+    contain: true,
+    wrapAround: true,
+    draggable: false,
+    dragThreshold: 0,
+    touch: false,
+    prevNextButtons: true,
+    pageDots: true
+});
 
 // Add text to navigation dots
 const dots = document.querySelectorAll('.flickity-page-dots .dot');
