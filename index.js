@@ -60,3 +60,26 @@ document.querySelectorAll('.slide-link').forEach(link => {
         flkty.select(slideIndex);
     });
 });
+
+// Handle About section
+const aboutButton = document.querySelector('.about-button');
+const aboutSection = document.querySelector('.about-section');
+const closeAbout = document.querySelector('.close-about');
+
+aboutButton.addEventListener('click', () => {
+    aboutSection.classList.add('active');
+    document.body.style.overflow = 'hidden';
+});
+
+closeAbout.addEventListener('click', () => {
+    aboutSection.classList.remove('active');
+    document.body.style.overflow = '';
+});
+
+// Close about section when clicking outside
+aboutSection.addEventListener('click', (e) => {
+    if (e.target === aboutSection) {
+        aboutSection.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+});
