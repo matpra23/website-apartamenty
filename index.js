@@ -26,7 +26,7 @@ const slides = Array.from(document.getElementsByClassName('carousel-cell'));
 var flkty = new Flickity(carousel, {
     cellAlign: 'center',
     contain: true,
-    wrapAround: true,
+    wrapAround: false,
     draggable: false,
     dragThreshold: 0,
     touch: false,
@@ -53,6 +53,22 @@ flkty.on('change', (index) => {
     } else {
         // Add 'hidden' class on other slides
         contactInfo.classList.add('hidden');
+    }
+
+    // Hide navigation buttons on first and last slides
+    const prevButton = document.querySelector('.flickity-prev-next-button.previous');
+    const nextButton = document.querySelector('.flickity-prev-next-button.next');
+    
+    if (index === 0) {
+        prevButton.classList.add('hidden');
+    } else {
+        prevButton.classList.remove('hidden');
+    }
+    
+    if (index === slides.length - 1) {
+        nextButton.classList.add('hidden');
+    } else {
+        nextButton.classList.remove('hidden');
     }
 });
 
