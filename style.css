@@ -97,6 +97,23 @@ body {
     border-bottom-color: rgba(255, 255, 255, 0.9);
 }
 
+/* Specific colors for slide links */
+.info-container .text .slide-link[data-slide="1"] {
+    border-bottom-color: rgba(8, 8, 148, 0.5);
+}
+
+.info-container .text .slide-link[data-slide="1"]:hover {
+    border-bottom-color: rgba(8, 8, 148, 0.8);
+}
+
+.info-container .text .slide-link[data-slide="2"] {
+    border-bottom-color: rgba(2, 59, 42, 0.5);
+}
+
+.info-container .text .slide-link[data-slide="2"]:hover {
+    border-bottom-color: rgba(2, 59, 42, 0.8);
+}
+
 /* Mobile touch feedback */
 @media (hover: none) {
     .info-container .text .slide-link:active {
@@ -294,6 +311,11 @@ body {
 .rabat {
     color: #ff0000;
     font-size: 12px;
+    margin: 4px 0;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    position: relative;
+    transition: all 0.3s ease;
 }
 
 /* Link Hover Effect */
@@ -330,6 +352,9 @@ body {
         font-size: 13px;
         min-width: 160px;
     }
+    .rabat {
+        font-size: 15px;
+    }
 }
 
 @media screen and (max-width: 992px) {
@@ -337,6 +362,9 @@ body {
         padding: 10px 18px;
         font-size: 12px;
         min-width: 150px;
+    }
+    .rabat {
+        font-size: 15px;
     }
 
     .carousel-cell:first-child .contact-info-slider {
@@ -350,6 +378,9 @@ body {
         font-size: 13px;
         bottom: 8vh;
     }
+    .rabat {
+        font-size: 15px;
+    }
 
     .carousel-cell:first-child .contact-info-slider {
         bottom: 15vh;
@@ -362,6 +393,9 @@ body {
         font-size: 11px;
         min-width: 140px;
         bottom: 6vh;
+    }
+    .rabat {
+        font-size: 15px;
     }
 
     .carousel-cell:first-child .contact-info-slider {
@@ -631,7 +665,7 @@ body {
     }
 
     .location-button {
-        top: 50px;
+        top: 60px;
         left: 15px;
         font-size: 18px;
         padding: 5px 8px;
