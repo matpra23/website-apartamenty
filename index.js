@@ -99,3 +99,33 @@ document.addEventListener('DOMContentLoaded', function() {
         showNavigation();
     });
 });
+
+// Location Section Navigation
+document.addEventListener('DOMContentLoaded', function() {
+    const locationButton = document.querySelector('.location-button');
+    const locationSection = document.querySelector('.location-section');
+    const closeLocation = document.querySelector('.close-location');
+    const navigationButtons = document.querySelectorAll('.flickity-prev-next-button');
+
+    function hideNavigation() {
+        navigationButtons.forEach(button => {
+            button.classList.add('hidden');
+        });
+    }
+
+    function showNavigation() {
+        navigationButtons.forEach(button => {
+            button.classList.remove('hidden');
+        });
+    }
+
+    locationButton.addEventListener('click', function() {
+        locationSection.classList.add('active');
+        hideNavigation();
+    });
+
+    closeLocation.addEventListener('click', function() {
+        locationSection.classList.remove('active');
+        showNavigation();
+    });
+});
