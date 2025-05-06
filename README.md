@@ -17,7 +17,6 @@ Strona internetowa prezentująca ofertę apartamentów w Łebie. Projekt składa
 
 ### Galerie Zdjęć
 - Osobne galerie dla Apartamentu Morze i Apartamentu Plaża
-- Responsywny układ zdjęć (4 zdjęcia w narożnikach)
 - Efekt powiększenia zdjęć przy najechaniu
 - Interaktywny przycisk powrotu do strony głównej
 - Dostosowanie do różnych rozdzielczości ekranu
@@ -27,12 +26,6 @@ Strona internetowa prezentująca ofertę apartamentów w Łebie. Projekt składa
 W przypadku pytań lub problemów technicznych prosimy o kontakt telefoniczny.
 
 ## 🚀 Rozwój Projektu
-
-### Planowane Funkcje
-- Integracja z systemem rezerwacji
-- Dodanie mapy lokalizacji
-- Rozbudowa sekcji atrakcji turystycznych
-- Sezonowa oferta dla klientów
 
 ### Optymalizacja i Bezpieczeństwo
 - Implementacja zmiennych CSS dla łatwiejszej modyfikacji stylów
