@@ -1074,7 +1074,8 @@ body {
 }
 
 .location-image {
-    max-width: 100%;
+    max-width: 80%;
+    width: 500px;
     height: auto;
     display: block;
     margin: 0 auto;
