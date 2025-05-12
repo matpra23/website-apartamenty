@@ -368,7 +368,7 @@ body {
     }
 
     .carousel-cell:first-child .contact-info-slider {
-        bottom: 20vh;
+        bottom: 15vh;
     }
 }
 
@@ -392,14 +392,14 @@ body {
         padding: 8px 15px;
         font-size: 11px;
         min-width: 140px;
-        bottom: 6vh;
+        bottom: 15vh;
     }
     .rabat {
         font-size: 15px;
     }
 
     .carousel-cell:first-child .contact-info-slider {
-        bottom: 12vh;
+        bottom: 15vh;
     }
 }
 
@@ -603,7 +603,7 @@ body {
 .location-button {
     position: absolute;
     top: 30px;
-    left: 110px;
+    left: 150px;
 }
 
 .location-button {
@@ -643,7 +643,7 @@ body {
 
     .location-button {
         top: 20px;
-        left: 110px;
+        left: 160px;
         font-size: 20px;
         padding: 6px 10px;
     }
@@ -666,7 +666,7 @@ body {
 
     .location-button {
         top: 15px;
-        left: 100px;
+        left: 140px;
         font-size: 18px;
         padding: 5px 8px;
     }
