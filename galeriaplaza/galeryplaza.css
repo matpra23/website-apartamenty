@@ -38,7 +38,7 @@ body::before {
   position: fixed;
   inset: 0;
   background: linear-gradient(var(--overlay-color), var(--overlay-color)), 
-              url("plaza-zdjecia/3a2.jpg") center/cover no-repeat;
+              url("../zdjecia/webp/3.webp"), url("../zdjecia/glowna/3.png") center/cover no-repeat;
   filter: blur(10px);
   z-index: -1;
 }

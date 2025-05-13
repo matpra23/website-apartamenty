@@ -39,7 +39,7 @@ body::before {
   position: fixed;
   inset: 0;
   background: linear-gradient(to bottom, rgba(17, 26, 37, 0.8), rgba(37, 36, 37, 0.2)),
-              url("../zdjecia/glowna/glowna.png") center/cover no-repeat;
+              url("../zdjecia/webp/glowna.webp"), url("../zdjecia/glowna/glowna.png") center/cover no-repeat;
   filter: blur(10px);
 }
 

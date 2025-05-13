@@ -38,7 +38,7 @@ body::before {
   position: fixed;
   inset: 0;
   background: linear-gradient(var(--overlay-color), var(--overlay-color)), 
-              url("morze-zdjecia/6a1.jpg") center/cover no-repeat;
+              url("../zdjecia/webp/2.webp"), url("../zdjecia/glowna/2.png") center/cover no-repeat;
   filter: blur(10px);
   z-index: -1;
 }
