@@ -653,21 +653,21 @@ body {
     .rating-badge {
         top: 15px;
         right: 15px;
-        font-size: 18px;
+        font-size: 15px;
         padding: 5px 8px;
     }
 
     .about-button {
         top: 15px;
         left: 15px;
-        font-size: 18px;
+        font-size: 15px;
         padding: 5px 8px;
     }
 
     .location-button {
-        top: 60px;
-        left: 15px;
-        font-size: 18px;
+        top: 15px;
+        left: 134px;
+        font-size: 15px;
         padding: 5px 8px;
     }
 }
