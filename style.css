@@ -47,7 +47,7 @@ body {
 
 .info-container .header {
     font-family: 'Roboto Slab', sans-serif;
-    font-size: 35px;
+    font-size: 55px;
     font-weight: 400;
     font-style: italic;
     letter-spacing: 4px;
@@ -82,7 +82,7 @@ body {
 
 .info-container .text {
     font-family: 'Montserrat', sans-serif;
-    font-size: 46px;
+    font-size: 55px;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 4px;
@@ -365,6 +365,12 @@ body {
     .rabat {
         font-size: 15px;
     }
+    .info-container .header {
+        font-size: 40px;
+    }
+    .info-container .text {
+        font-size: 55px;
+    }
 }
 
 @media screen and (max-width: 992px) {
@@ -375,6 +381,12 @@ body {
     }
     .rabat {
         font-size: 15px;
+    }
+    .info-container .header {
+        font-size: 35px;
+    }
+    .info-container .text {
+        font-size: 46px;
     }
 
     .carousel-cell:first-child .contact-info-slider {
