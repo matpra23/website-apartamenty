@@ -33,17 +33,6 @@ body {
     position: relative;
 }
 
-.carousel-cell-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: no-repeat center/cover;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-}
-
 /* Gradient Overlay */
 .gradient {
     position: absolute;
@@ -65,11 +54,6 @@ body {
     letter-spacing: 4px;
     color: rgba(255, 255, 255, 0.7);
     margin-bottom: 8px;
-    text-shadow: 
-    -1px -1px 0 rgba(0, 0, 0, 0.2),
-    1px -1px 0 rgba(0, 0, 0, 0.2),
-    -1px 1px 0 rgba(0, 0, 0, 0.2),
-    1px 1px 0 rgba(0, 0, 0, 0.3);
 }
 
 .info-container .header .slide-link {
@@ -99,11 +83,6 @@ body {
     text-transform: uppercase;
     letter-spacing: 4px;
     margin-bottom: 32px;
-    text-shadow: 
-        -1px -1px 0 rgba(0, 0, 0, 0.2),
-        1px -1px 0 rgba(0, 0, 0, 0.2),
-        -1px 1px 0 rgba(0, 0, 0, 0.2),
-        1px 1px 0 rgba(0, 0, 0, 0.3);
 }
 
 .info-container .text .slide-link {
