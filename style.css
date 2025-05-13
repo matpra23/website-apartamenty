@@ -256,7 +256,7 @@ body {
 
 /* Contact Info Slider Base Styles */
 .contact-info-slider {
-    --base-bg: rgba(17, 26, 37, 0.85);
+    --base-bg: rgba(17, 26, 37, 0.90);
     --hover-bg: rgba(17, 26, 37, 0.95);
     --shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
     --hover-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
