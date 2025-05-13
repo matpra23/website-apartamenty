@@ -53,6 +53,11 @@ body {
     letter-spacing: 4px;
     color: rgba(255, 255, 255, 0.7);
     margin-bottom: 8px;
+    text-shadow: 
+        -1px -1px 0 rgba(0, 0, 0, 0.1),
+        1px -1px 0 rgba(0, 0, 0, 0.1),
+        -1px 1px 0 rgba(0, 0, 0, 0.1),
+        1px 1px 0 rgba(0, 0, 0, 0.3);
 }
 
 .info-container .header .slide-link {
@@ -82,6 +87,11 @@ body {
     text-transform: uppercase;
     letter-spacing: 4px;
     margin-bottom: 32px;
+    text-shadow: 
+        -1px -1px 0 rgba(0, 0, 0, 0.2),
+        1px -1px 0 rgba(0, 0, 0, 0.2),
+        -1px 1px 0 rgba(0, 0, 0, 0.2),
+        1px 1px 0 rgba(0, 0, 0, 0.3);
 }
 
 .info-container .text .slide-link {
@@ -551,7 +561,7 @@ body {
     font-weight: 500;
     font-size: 16px;
     padding: 8px 12px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(0, 0, 0, 0.3);
     border-radius: 8px;
     z-index: 10;
     cursor: pointer;
@@ -587,7 +597,7 @@ body {
     font-weight: 500;
     font-size: 16px;
     padding: 8px 12px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(0, 0, 0, 0.3);
     border-radius: 8px;
     z-index: 10;
     cursor: pointer;
@@ -613,7 +623,7 @@ body {
     font-weight: 500;
     font-size: 16px;
     padding: 8px 12px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(0, 0, 0, 0.3);
     border-radius: 8px;
     z-index: 10;
     cursor: pointer;
@@ -921,6 +931,7 @@ body {
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-size: 28px;
+    font-weight: 500;
     margin-bottom: 30px;
     text-align: center;
     padding: 10px 0;
