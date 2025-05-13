@@ -626,6 +626,7 @@ body {
 }
 
 /* Responsive adjustments for rating badge & about badge*/
+/* Tablety */
 @media screen and (max-width: 768px) {
     .rating-badge {
         top: 20px;
@@ -648,7 +649,7 @@ body {
         padding: 6px 10px;
     }
 }
-
+/* Telefony */
 @media screen and (max-width: 480px) {
     .rating-badge {
         top: 15px;
@@ -666,7 +667,7 @@ body {
 
     .location-button {
         top: 15px;
-        left: 134px;
+        left: 125px;
         font-size: 15px;
         padding: 5px 8px;
     }
