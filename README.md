@@ -16,18 +16,15 @@ Strona internetowa prezentująca ofertę apartamentów w Łebie. Projekt składa
 - Płynne animacje i przejścia
 
 ### Galerie Zdjęć
-- Osobne galerie dla Apartamentu Morze i Apartamentu Plaża
+- Galerie dla Apartamentu Morze i Apartamentu Plaża
 - Efekt powiększenia zdjęć przy najechaniu
 - Interaktywny przycisk powrotu do strony głównej
 - Dostosowanie do różnych rozdzielczości ekranu
 - Zoptymalizowany modal do przeglądania zdjęć
 
-## 📞 Kontakt
-W przypadku pytań lub problemów technicznych prosimy o kontakt telefoniczny.
-
 ## 🚀 Rozwój Projektu
 
-### Optymalizacja i Bezpieczeństwo
+### Optymalizacja
 - Implementacja zmiennych CSS dla łatwiejszej modyfikacji stylów
 - Optymalizacja wydajności poprzez grupowanie selektorów CSS
 - Modernizacja składni CSS z wykorzystaniem nowych właściwości
@@ -57,12 +54,17 @@ W przypadku pytań lub problemów technicznych prosimy o kontakt telefoniczny.
 website-apartamenty/
 ├── index.html
 ├── style.css
-├── galeriaplaza/
-│   ├── index.html
-│   └── galeryplaza.css
+├── index.js
 ├── galeriamorze/
 │   ├── index.html
-│   └── galerymorze.css
+│   ├── galerymorze.css
+│   ├── script.js
+│   └── morze-zdjecia/
+├── galeriaplaza/
+│   ├── index.html
+│   ├── galeryplaza.css
+│   ├── script.js
+│   └── plaza-zdjecia/
 ├── opinie/
 │   ├── opinie.html
 │   ├── opinie.css
@@ -72,17 +74,17 @@ website-apartamenty/
     └── opinie/
 ```
 
-## 🔒 Bezpieczeństwo
-- Zabezpieczenie przed przewijaniem poziomym
-- Optymalizacja obrazów i zasobów
+## 🔒 Bezpieczeństwo i Optymalizacja
 - Bezpieczne linkowanie do zewnętrznych stron
-- Ochrona przed atakami XSS poprzez odpowiednie nagłówki
+- Bezpieczne otwieranie linków zewnętrznych w nowych kartach
+- Ochrona przed atakami XSS
+- Zoptymalizowane meta tagi
+- Optymalizacja obrazów i zasobów
 - Implementacja polityki bezpieczeństwa treści (CSP)
 - Zabezpieczenie przed clickjackingiem
-- Bezpieczne otwieranie linków zewnętrznych w nowych kartach
+
 
 ## 📈 SEO i Wydajność
-- Zoptymalizowane meta tagi
 - Responsywne obrazy z odpowiednimi atrybutami
 - Szybkie ładowanie strony dzięki optymalizacji CSS
 - Przyjazne adresy URL
@@ -93,5 +95,5 @@ website-apartamenty/
 ## 🔄 Kompatybilność
 - Wsparcie dla nowoczesnych przeglądarek
 - Fallbacki dla starszych wersji przeglądarek
-- Responsywność na wszystkich urządzeniach
+- Responsywność na wszystkich rozdzielczosciach
 - Optymalizacja dla różnych rozdzielczości ekranu
