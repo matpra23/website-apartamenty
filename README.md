@@ -1,4 +1,4 @@
-# Apartamenty Łeba - Strona Internetowa
+# Apartamenty Łeba - Website project
 
 🌐 [Odwiedź stronę](https://morzeiplaza.com/)
 
