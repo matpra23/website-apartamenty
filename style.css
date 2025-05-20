@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto+Slab:wght@300;400;500;600;700&display=swap');
 
+:root {
+    --vh: 1vh;
+}
+
+@supports (-webkit-touch-callout: none) {
+    :root {
+        --vh: calc(var(--vh, 1vh));
+    }
+}
+
 /* Reset & Base Styles */
 *, *::before, *::after {
     margin: 0;
@@ -9,14 +19,20 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    height: 100vh;
+    min-height: 100vh; /* Fallback */
+    min-height: calc(var(--vh, 1vh) * 100);
     color-scheme: light dark;
+    overflow-x: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
 }
 
 /* Slider Layout */
 .slider {
     width: 100%;
-    height: 100vh;
+    height: 100vh; /* Fallback */
+    height: calc(var(--vh, 1vh) * 100);
     overflow: hidden;
     position: relative;
     z-index: 1;
@@ -24,13 +40,21 @@ body {
 
 .carousel-cell {
     width: 100%;
-    height: 100%;
+    height: 100vh; /* Fallback */
+    height: calc(var(--vh, 1vh) * 100);
     background: no-repeat center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     position: relative;
+}
+
+@supports (-webkit-touch-callout: none) {
+    .slider,
+    .carousel-cell {
+        height: -webkit-fill-available;
+    }
 }
 
 /* Gradient Overlay */
@@ -392,6 +416,7 @@ body {
         padding: 15px 20px;
         font-size: 16px;
         bottom: 8vh;
+        bottom: calc(var(--vh, 1vh) * 8);
     }
     .rabat {
         font-size: 15px;
@@ -399,6 +424,7 @@ body {
 
     .carousel-cell:first-child .contact-info-slider {
         bottom: 12vh;
+        bottom: calc(var(--vh, 1vh) * 12);
     }
 }
 
@@ -408,6 +434,7 @@ body {
         font-size: 14px;
         min-width: 140px;
         bottom: 15vh;
+        bottom: calc(var(--vh, 1vh) * 15);
     }
     .rabat {
         font-size: 15px;
@@ -415,6 +442,7 @@ body {
 
     .carousel-cell:first-child .contact-info-slider {
         bottom: 15vh;
+        bottom: calc(var(--vh, 1vh) * 15);
     }
 }
 
@@ -422,12 +450,14 @@ body {
 @media screen and (max-height: 800px) {
     .contact-info-slider {
         bottom: 12vh;
+        bottom: calc(var(--vh, 1vh) * 12);
     }
 }
 
 @media screen and (max-height: 600px) {
     .contact-info-slider {
         bottom: 10vh;
+        bottom: calc(var(--vh, 1vh) * 10);
     }
 }
 
