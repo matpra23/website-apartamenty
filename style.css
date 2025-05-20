@@ -217,32 +217,34 @@ body {
 
 /* First slide dot styles - more specific selectors */
 .flickity-page-dots .dot:first-child {
-    background: rgba(255, 255, 255, 0.4) !important;
+    background: rgba(0, 0, 0, 0.6) !important;
     transition: all 0.3s ease;
 }
 
 .flickity-page-dots .dot:first-child:hover,
 .flickity-page-dots .dot:first-child.is-selected {
-    background: rgba(255, 255, 255, 0.9) !important;
-    color: rgba(0, 0, 0, 0.8) !important;
+    background: rgba(0, 0, 0, 0.8) !important;
+    color: rgba(255, 255, 255, 0.9) !important;
     font-weight: 600;
 }
 
 /* Specific colors for other dots */
 .flickity-page-dots .dot:nth-child(2) {
-    background: rgba(8, 8, 148, 0.4);
+    background: rgba(8, 8, 148, 0.7);
 }
 .flickity-page-dots .dot:nth-child(2):hover,
 .flickity-page-dots .dot:nth-child(2).is-selected {
-    background: rgba(8, 8, 148, 0.8);
+    background: rgba(8, 8, 148, 0.9);
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .flickity-page-dots .dot:nth-child(3) {
-    background: rgba(2, 59, 42, 0.4);
+    background: rgba(2, 59, 42, 0.7);
 }
 .flickity-page-dots .dot:nth-child(3):hover,
 .flickity-page-dots .dot:nth-child(3).is-selected {
-    background: rgba(2, 59, 42, 0.8);
+    background: rgba(2, 59, 42, 0.9);
+    color: rgba(255, 255, 255, 0.9);
 }
 
 /* Contact Info Slider Base Styles */
@@ -350,7 +352,7 @@ body {
 @media screen and (max-width: 1200px) {
     .contact-info-slider {
         padding: 12px 20px;
-        font-size: 13px;
+        font-size: 20px;
         min-width: 160px;
     }
     .rabat {
@@ -367,7 +369,7 @@ body {
 @media screen and (max-width: 992px) {
     .contact-info-slider {
         padding: 10px 18px;
-        font-size: 12px;
+        font-size: 18px;
         min-width: 150px;
     }
     .rabat {
@@ -388,7 +390,7 @@ body {
 @media screen and (max-width: 768px) {
     .contact-info-slider {
         padding: 15px 20px;
-        font-size: 13px;
+        font-size: 16px;
         bottom: 8vh;
     }
     .rabat {
@@ -396,14 +398,14 @@ body {
     }
 
     .carousel-cell:first-child .contact-info-slider {
-        bottom: 15vh;
+        bottom: 12vh;
     }
 }
 
 @media screen and (max-width: 576px) {
     .contact-info-slider {
         padding: 8px 15px;
-        font-size: 11px;
+        font-size: 14px;
         min-width: 140px;
         bottom: 15vh;
     }
