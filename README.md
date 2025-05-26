@@ -1,6 +1,6 @@
 # Apartamenty Łeba - Website Project
 
-🌐 [Visit Website](https://morzeiplaza.com/)
+[Visit the Website](https://morzeiplaza.com/)
 
 ## Project Overview
 A modern, responsive website showcasing rental apartments in Łeba. The project includes an interactive landing page with a photo carousel and dedicated galleries for each apartment.
