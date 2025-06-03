@@ -138,23 +138,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.0.5/flickity.pkgd.min.js"></script>
     <script src="index.js"></script>
-    <script>
-        // Fix for iOS Safari viewport height
-        function setVhVariable() {
-            let vh = window.innerHeight * 0.01;
-            document.documentElement.style.setProperty('--vh', `${vh}px`);
-        }
-
-        // Initial set
-        setVhVariable();
-
-        // Update on resize and orientation change
-        window.addEventListener('resize', setVhVariable);
-        window.addEventListener('orientationchange', () => {
-            // Wait for orientation change to complete
-            setTimeout(setVhVariable, 100);
-        });
-    </script>
 </body>
 
 </html>
